@@ -133,11 +133,11 @@ else
     })
 end
 
---custom widgets
-batteryWidget = awful.widget.watch("acpi",1)
+-- --custom widgets
+-- batteryWidget = awful.widget.watch("acpi",1)
 
-mylauncher = awful.widget.launcher({ image = beautiful.awesome_icon,
-                                     menu = mymainmenu })
+-- mylauncher = awful.widget.launcher({ image = beautiful.awesome_icon,
+--                                      menu = mymainmenu })
 
 -- Menubar configuration
 menubar.utils.terminal = terminal -- Set the terminal for applications that require it
@@ -148,7 +148,7 @@ mykeyboardlayout = awful.widget.keyboardlayout()
 
 -- {{{ Wibar
 -- Create a textclock widget
-mytextclock = wibox.widget.textclock()
+mytextclock = wibox.widget.textclock("%a %b %c, %H:%M:%S", 1)
 
 --call function for calender
 mytextclock:connect_signal("button::press",
